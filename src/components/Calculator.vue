@@ -15,7 +15,7 @@
                     <span class="ml-3 font-medium text-gray-600">Subtract GST</span>
                 </label>
             </div>
-            <button type="submit" class="inline-flex justify-center items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md shadow-sm text-white bg-green-400 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400">Calculate</button>
+            <button type="submit" class="inline-flex justify-center items-center px-3 py-2 border border-transparent text-sm leading-4 font-bold rounded-md shadow-sm text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400">Calculate</button>
         </form>
 
         <ul v-if="results.total" class="flex flex-col bg-green-50 space-y-4 p-6 rounded-md font-bold text-gray-600 border border-green-400">

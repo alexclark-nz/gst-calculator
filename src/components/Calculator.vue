@@ -1,6 +1,6 @@
 <template>
     <div class="w-full max-w-lg grid gap-6">
-        <form @submit.prevent="handleSubmit" class="bg-gray-100 flex flex-col space-y-4 p-6 rounded-md">
+        <form @submit.prevent="handleSubmit" class="bg-gray-100 flex flex-col space-y-6 p-6 rounded-md">
             <label for="amount" class="flex flex-col">
                 <span class="mb-1">Amount ($)</span>
                 <input class="shadow-sm focus:ring-green-400 focus:border-green-400 block w-full sm:text-sm border-gray-300 rounded-md" type="text" name="amount" id="amount" placeholder="10.00" v-model="form.amount" required>
@@ -15,10 +15,10 @@
                     <span class="ml-3 font-medium text-gray-600">Subtract GST</span>
                 </label>
             </div>
-            <button type="submit" class="inline-flex justify-center items-center px-3 py-2 border border-transparent text-sm leading-4 font-bold rounded-md shadow-sm text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400">Calculate</button>
+            <button type="submit" class="inline-flex justify-center items-center px-3 py-3 border border-transparent text-md leading-4 font-bold rounded-md shadow-sm text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 transition-all duration-300 ease-in-out">Calculate</button>
         </form>
 
-        <ul v-if="results.total" class="flex flex-col bg-green-50 space-y-4 p-6 rounded-md font-bold text-gray-600 border border-green-400">
+        <ul :class="`flex flex-col bg-green-50 space-y-4 p-6 rounded-md font-bold text-gray-600 border border-green-400 transition-all duration-300 ease-in-out ${results.total ? 'opacity-100' : 'opacity-0'}`">
             <li>
                 <span class="text-green-500">Subtotal:</span> {{ results.subtotal }}
             </li>

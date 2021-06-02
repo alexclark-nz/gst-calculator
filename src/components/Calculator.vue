@@ -67,7 +67,6 @@ import useGst from 'gst-utils';
 
             function handleSubmit() {
                 const { gst, amountInclusive, amountExclusive } = useGst(form.amount);
-                console.log({gst, amountInclusive, amountExclusive});
 
                 switch (form.method) {
                     case 'add':
